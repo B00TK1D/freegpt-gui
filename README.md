@@ -15,20 +15,20 @@ Run the following command to clone the repository:
 git clone https://github.com/ramonvc/freegpt-webui.git
 ```
 
-### Install Dependencies :wrench: 
+### Set up Copilot token :wrench: 
 Navigate to the project directory:
 ```
 cd freegpt-webui
 ```
 
-Install the dependencies:
+Set up your copilot token
 ```
-pip install -r requirements.txt
+python3 setup.py
 ```
 ## Running the Application :rocket:
 To run the application, run the following command:
 ```
-python run.py
+docker-compose up -d
 ```
 
 Access the application in your browser using the URL:
@@ -40,35 +40,6 @@ or
 http://localhost:1338
 ```
 
-
-## Docker 🐳
-### Prerequisites
-Before you start, make sure you have installed [Docker](https://www.docker.com/get-started) on your machine.
-
-### Running the Docker
-Pull the Docker image from Docker Hub:
-```
-docker pull ramonvc/freegpt-webui
-```
-
-Run the application using Docker:
-```
-docker run -p 1338:1338 ramonvc/freegpt-webui
-```
-
-Access the application in your browser using the URL:
-```
-http://127.0.0.1:1338
-```
-or
-```
-http://localhost:1338
-```
-
-When you're done using the application, stop the Docker containers using the following command:
-```
-docker stop <container-id>
-```
 
 ## Legal Notice
 This repository is _not_ associated with or endorsed by providers of the APIs contained in this GitHub repository. This

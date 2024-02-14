@@ -12,6 +12,8 @@ needs_auth = False
 
 token = None
 
+token_age = 0
+
 def setup():
     resp = requests.post('https://github.com/login/device/code', headers={
             'accept': 'application/json',
@@ -78,11 +80,12 @@ def get_token():
     # Parse the response json, isolating the token
     resp_json = resp.json()
     token = resp_json.get('token')
+    token_age = time.time()
 
 
 def _create_completion(model: str, messages: list, stream: bool, **kwargs):
     global token
-    if not token:
+    if not token or time.time() - token_age > 600:
         get_token()
     headers = {
         'authorization': f'Bearer {token}',

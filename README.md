@@ -12,13 +12,13 @@ To get started with this project, you'll need to clone the repository and have [
 Run the following command to clone the repository:  
 
 ```
-git clone https://github.com/ramonvc/freegpt-webui.git
+git clone https://github.com/B00TK1D/freegpt-gui.git
 ```
 
 ### Set up Copilot token :wrench: 
 Navigate to the project directory:
 ```
-cd freegpt-webui
+cd freegpt-gui
 ```
 
 Set up your copilot token
